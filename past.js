@@ -1,13 +1,13 @@
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyCAojlk4cItXCh9K_Strme-fr_6HZQy5Vg",
+    apiKey: "************************",
     authDomain: "surveys-73f00.firebaseapp.com",
     databaseURL: "https://surveys-73f00.firebaseio.com",
     projectId: "surveys-73f00",
     storageBucket: "surveys-73f00.appspot.com",
     messagingSenderId: "266311893301",
-    appId: "1:266311893301:web:87b1f6beda944a33f80c7c"
+    appId: "***************************"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
