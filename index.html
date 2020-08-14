@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+        <title>City Tech Airlines</title>
+               
+        <style>
+          
+          input[type="number"] {
+   width:100px;
+}
+
+.combox * {
+  vertical-align: middle;
+}
+        </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/79bd263aba.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="icon" href="LogoMakr_9YYnS2.png">
+
+
+</head>
+
+
+<body style="background-color: #ffffff;">
+  
+ <header> 
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #152FA3;">
+ 
+
+
+    <div id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <div class="overlay-content">
+          <a href="index.html">Home</a>
+          <a href="past2.html">Past Survey Submissions</a>
+
+
+        </div>
+      </div>
+
+
+      
+      <span style="font-size:30px;cursor:pointer;color:rgb(134, 134, 158)" onclick="openNav()"><img class="navcalc" src="LogoMakr_9YYnS2.png" height="40px"> 
+      
+      </span>
+      
+     
+  
+
+      
+    <a class="navbar-brand" href="index.html">
+        <img src="testlogo.png" width="150" height="50" alt="CST">
+      </a>
+
+      <div class="collapse navbar-collapse" 
+      id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+<!-- Links -->
+
+</ul>
+
+
+
+
+  
+      
+</nav>
+
+</header>
+
+
+  
+<div class="text-center">
+
+  <h1 class="display-3" style="color: #152FA3">Airline Survey</h1>
+  
+  <a class="btn btn-primary btn-lg mt-2 mb-2" style="background-color: #F4EF21; color: #152FA3;" href="past2.html" >View Past Submissions</a>
+
+<h3 class="display-4" style="color: #152FA3;">Please answer then press submit</h3>
+      <form id="surveyForm">
+        <p>
+          <label>Flight Date</label>
+          <input type="date" id="fdate">
+        </p>
+        <p>
+          <label>Flight Time</label>
+          <input type="time" id="ftime">
+        </p>
+        <p>
+          <label>Flight Number</label>
+          <input type="number" min="100" max="1000" id="fnum" placeholder="(100-1000)">
+        </p>
+        
+        <p class="combox">
+          <label>Additional Comments</label>
+          <textarea rows="2" id="message"></textarea>
+        </p><br/>
+
+
+<b>Friendliness of customer staff</b><br/>
+  <input type="radio" name="frd" value="no opinion" />No Opinion
+  <input type="radio" name="frd" value="poor" />Poor
+<input type="radio" name="frd"  value="fair" />Fair
+  <input type="radio" name="frd" value="good" />Good
+  <input type="radio" name="frd" value="excellent" />Excellent
+</p>
+
+<b>Space for luggage storage</b><br/>
+  <input type="radio"name="lug" value="no opinion" />No Opinion
+  <input type="radio"name="lug" value="poor" />Poor
+<input type="radio"name="lug"  value="fair" />Fair
+  <input type="radio"name="lug" value="good" />Good
+  <input type="radio"name="lug" value="excellent" />Excellent
+
+</p>
+<p>
+<b>Comfort of Seating</b><br/>
+  <input type="radio"name="seat" value="no opinion" />No Opinion
+  <input type="radio"name="seat" value="poor" />Poor
+<input type="radio"name="seat"  value="fair" />Fair
+  <input type="radio"name="seat" value="good"/>Good
+  <input type="radio" name="seat" value="excellent"/>Excellent
+
+</p>
+</p>
+        
+      
+<p>
+<b>Cleanliness</b><br/>
+  <input type="radio"name="cln" value="no opinion" />No Opinion
+  <input type="radio"name="cln" value="poor" />Poor
+<input type="radio"name="cln"  value="fair" />Fair
+  <input type="radio"name="cln" value="good" />Good
+  <input type="radio"name="cln" value="excellent"/>Excellent
+
+</p>
+</p>
+        
+<p><b>Noise Level</b><br/>
+  <input type="radio"name="nse" value="no opinion" />No Opinion 
+  <input type="radio"name="nse" value="poor" />Poor 
+  <input type="radio"name="nse"  value="fair" />Fair 
+  <input type="radio"name="nse" value="good" />Good 
+  <input type="radio"name="nse" value="excellent" />Excellent
+
+</p>
+<p>
+
+</p>
+
+<p class="full">
+<button type="submit" onclick="alertSubmit()" class="btn btn-primary btn-md mt-2 mb-2" style="background-color: #F4EF21; color: #152FA3;">Submit</button>
+<button type="reset"name="frd" class="btn btn-primary btn-md mt-2 mb-2" style="background-color: #F4EF21; color: #152FA3;">Clear</button>
+<script>
+  function alertSubmit(){
+    alert("Your survey has been submitted!");
+  }
+</script>
+</p>
+<p>
+      </form>
+    </div>
+    </div>
+
+  
+
+        
+          
+        
+          
+    </div>
+
+
+  </div>
+  
+</div>
+<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+<script src="main.js"></script>
+
+<script>
+    
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
+    
+    <script>
+      $(document).ready(function() {
+
+
+var degrees = 0;
+$('.navcalc').click(function rotateMe(e) {
+
+  degrees += 360;
+
+  //$('.img').addClass('rotated'); // for one time rotation
+
+  $('.navcalc').css({
+
+    'transform': 'rotate(' + degrees + 'deg)',
+    '-ms-transform': 'rotate(' + degrees + 'deg)',
+    '-moz-transform': 'rotate(' + degrees + 'deg)',
+    '-webkit-transform': 'rotate(' + degrees + 'deg)',
+    '-o-transform': 'rotate(' + degrees + 'deg)'
+  });
+
+})
+
+
+
+
+});
+
+    </script>
+
+
+
+</body>
+<footer>
+  <p class="text-muted">
+  Khushpreet Paul, CST 4905
+  </p>
+  </footer>
+</html>
+
+

@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+        <title>City Tech Airlines</title>
+               
+        <style>
+            
+
+        </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/79bd263aba.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="icon" href="LogoMakr_9YYnS2.png">
+
+
+</head>
+
+
+<body style="background-color: #ffffff;">
+  
+ <header> 
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #152FA3;">
+ 
+
+
+    <div id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <div class="overlay-content">
+          <a href="index.html">Home</a>
+          <a href="past2.html">Past Survey Submissions</a>
+
+
+        </div>
+      </div>
+
+
+      
+      <span style="font-size:30px;cursor:pointer;color:rgb(134, 134, 158)" onclick="openNav()"><img class="navcalc" src="LogoMakr_9YYnS2.png" height="40px"> 
+      
+      </span>
+      
+     
+  
+
+      
+    <a class="navbar-brand" href="index.html">
+        <img src="testlogo.png" width="150" height="50" alt="Wei, Wei Co. LLP.">
+      </a>
+
+      <div class="collapse navbar-collapse" 
+      id="navbarSupportedContent">
+         
+  </div>
+
+  
+      
+</nav>
+
+</header>
+
+
+  
+<div class="text-center">
+
+  <h1 class="display-4" style="color: #152FA3">View Survey Submissions</h1>
+
+
+       <form id="viewsurvey">
+     <!--This stops Enter button from refreshing list twice--> 
+       <button type="submit" disabled style="display: none" aria-hidden="true"></button> 
+     <!---->
+
+<p class="full">
+  <button type="submit" id="submitbtn" class="btn btn-primary btn-lg" style="background-color: #F4EF21; color: #152FA3;" onclick="document.getElementById('lastupdate').value = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'})">View Past Submissions</button>
+  <a class="btn btn-primary btn-lg" href="index.html" role="button" style="background-color: #F4EF21; color: #152FA3;">Go Back</a>
+  </p>
+  <p>
+  <label>Last Updated: </label>
+  <input type="text" id="lastupdate" value="" placeholder="Time when list refreshed" />
+  </p>
+
+<script>
+  $(document).ready(function(){
+    $("#gobackbutton").hide();
+
+    $("#submitbtn").click(function(){
+      $("#submitbtn").hide();
+    });
+    
+    $("#submitbtn").click(function(){
+      $("#gobackbutton").show();
+    });
+  });
+  </script>
+
+<div class="container">
+    <p>Search for something specific after pressing "View Past Submissions" button:</p>
+    
+    
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    
+  </div>
+  <ol id="survey-list"></ol>
+
+</div>
+<div class="text-center">
+<a class="btn btn-primary btn-lg" id="gobackbutton" href="index.html" role="button" style="background-color: #F4EF21; color: #152FA3;">Go Back</a>
+</div>
+</form>
+
+
+
+</div>
+    
+  
+          
+            
+          
+            
+
+
+    
+  </div>
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+  
+  <script src="past.js"></script>
+
+
+  <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#survey-list li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+    
+              
+                
+<script>
+    
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
+    
+    <script>
+      $(document).ready(function() {
+
+
+var degrees = 0;
+$('.navcalc').click(function rotateMe(e) {
+
+  degrees += 360;
+
+  //$('.img').addClass('rotated'); // for one time rotation
+
+  $('.navcalc').css({
+
+    'transform': 'rotate(' + degrees + 'deg)',
+    '-ms-transform': 'rotate(' + degrees + 'deg)',
+    '-moz-transform': 'rotate(' + degrees + 'deg)',
+    '-webkit-transform': 'rotate(' + degrees + 'deg)',
+    '-o-transform': 'rotate(' + degrees + 'deg)'
+  });
+
+})
+
+
+
+
+});
+
+    </script>
+
+
+
+</body>
+<footer>
+    <p class="text-muted">
+    Khushpreet Paul, CST 4905
+    </p>
+    </footer>
+</html>
+
+

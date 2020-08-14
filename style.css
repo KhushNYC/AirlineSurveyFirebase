@@ -1,0 +1,22 @@
+
+
+body{
+    font-family: ubuntu;
+  padding:1em;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 20px;
+    background: #f6f6f6;
+    font-size: 20px;
+    color: #555;
+}
+
+li span{
+    display: block;
+}
